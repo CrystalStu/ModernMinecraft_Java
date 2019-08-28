@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2">
+    <VBox maxWidth="600" minHeight="350" spacing="20" alignment="CENTER">
+        <JFXDialogLayout fx:id="content"
+                         style="-fx-background-color: WHITE; -fx-background-radius: 3">
+            <heading>
+                <Label>Login</Label>
+            </heading>
+            <body>
+                <VBox maxWidth="600" minHeight="250" spacing="20" alignment="CENTER">
+                    <StackPane style="-fx-padding:20">
+                        <JFXComboBox scaleZ="1.5" scaleX="1.5" scaleY="1.5" id="jfxComboBox" prefWidth="300"
+                                     promptText="Select Version">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <Label>
+                                        Minecraft 1.8.1
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontIcon iconLiteral="fas-star" iconSize="18"
+                                                          styleClass="custom-jfx-list-view-icon"/>
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Minecraft 1.10.1
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontIcon iconLiteral="fas-star" iconSize="18"
+                                                          styleClass="custom-jfx-list-view-icon"/>
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Minecraft 1.12.1
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontIcon iconLiteral="fas-star" iconSize="18"
+                                                          styleClass="custom-jfx-list-view-icon"/>
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Minecraft 1.8.1-forge
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontIcon iconLiteral="fas-star" iconSize="18"
+                                                          styleClass="custom-jfx-list-view-icon"/>
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Minecraft 1.12.1-forge
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontIcon iconLiteral="fas-star" iconSize="18"
+                                                          styleClass="custom-jfx-list-view-icon"/>
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                </FXCollections>
+                            </items>
+                            <validators>
+                                <RequiredFieldValidator message="Version Required!">
+                                    <FontIcon iconLiteral="fas-exclamation-triangle" styleClass="error-icon"/>
+                                </RequiredFieldValidator>
+                            </validators>
+                        </JFXComboBox>
+                    </StackPane>
+                    <JFXTextField scaleZ="1.5" scaleX="1.5" scaleY="1.5" id="validatedText" promptText="Offline User Name" labelFloat="true">
+                    </JFXTextField>
+                    <Label>OR</Label>
+                    <JFXTextField scaleZ="1.5" scaleX="1.5" scaleY="1.5"  id="validatedText" promptText="Online User Name" labelFloat="true">
+                    </JFXTextField>
+                    <StackPane style="-fx-padding:20">
+                        <JFXPasswordField scaleZ="1.5" scaleX="1.5" scaleY="1.5"  id="validatedPassword" promptText="User Password" labelFloat="true">
+                        </JFXPasswordField>
+                    </StackPane>
+                    <StackPane style="-fx-padding:20">
+                        <JFXButton scaleZ="1.2" scaleX="1.2" scaleY="1.2" minWidth="350" buttonType="RAISED" text="START GAME"
+                                   style="-fx-text-fill:WHITE;-fx-background-color:#ff4081;-fx-padding:10;"/>
+                    </StackPane>
+                </VBox>
+            </body>
+        </JFXDialogLayout>
+    </VBox>
+</StackPane>
+
